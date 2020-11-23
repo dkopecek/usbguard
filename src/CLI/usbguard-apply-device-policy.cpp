@@ -102,6 +102,15 @@ namespace usbguard
      */
 
     std::list<std::string> args(argv, argv + argc);
+    if (argc == 1/* && is not numeric*/) {
+      // contains exactly one object
+      args.clear();
+      std::stringstream ss(argv[0]);
+      std::string tmp;
+      // the split will be restored later after some checks
+      while (ss >> tmp) args.push_back(tmp);
+    }
+
     try { /* Check whether rule target has been supplied */
       Rule::targetFromString(args.front());
     }
