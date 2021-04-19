@@ -152,8 +152,8 @@
       If the permanent flag is set to True, a rule will be appended to the policy or an exiting device
       rule will be modified in order to permanently store the authorization decision.
 
-      Sucessfull exection of this method will cause the DevicePolicyChanged signal to be broadcasted if
-      the device authorization target was different than the applied target.
+      Successful execution of this method will cause the DevicePolicyChanged signal to be broadcasted if
+      the device authorization target was different from the applied target.
       -->
     <method name="applyDevicePolicy">
       <arg name="id" direction="in" type="u"/>
